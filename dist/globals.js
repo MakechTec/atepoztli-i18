@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.setLanguageDefinitions = exports.getGlobalLanguge = exports.setGlobalLanguge = exports._ = void 0;
+const Translator_1 = require("./translator/Translator");
+const _ = (sentence) => globalTranslator.translate(sentence);
+exports._ = _;
+const setGlobalLanguge = (lang) => globalTranslator.setGlobalLanguage(lang);
+exports.setGlobalLanguge = setGlobalLanguge;
+const getGlobalLanguge = () => globalTranslator.getGlobalLanguage();
+exports.getGlobalLanguge = getGlobalLanguge;
+const setLanguageDefinitions = (definitions) => globalTranslator.setLanguageDefinitions(definitions);
+exports.setLanguageDefinitions = setLanguageDefinitions;
+const globalTranslator = new Translator_1.Translator();
